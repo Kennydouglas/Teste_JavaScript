@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Teste 1 Escribo</h2>
+
+<p>Insira um número abaixo:</p>
+
+<input id="entrada">
+
+<button type="button" onclick="Somatorio_numeros_primos()">Confirmar</button>
+
+<p id="final"></p>
+
+<script>
+function Somatorio_numeros_primos() {
+  let x = document.getElementById("entrada").value;
+  let final = 0;
+  let text;
+  if (isNaN(x)) {
+    text = "Não é um número";
+    document.getElementById("final").innerHTML = text;
+  } else {
+    for (i=0; i<x; i++){
+        if(i % 3 == 0 || i % 5 == 0){
+            final = final + i;
+        }    
+    }
+    document.getElementById("final").innerHTML = final;
+  }
+}
+</script>
+
+</body>
+</html> 
